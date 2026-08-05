@@ -1,0 +1,197 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand palette — emerald + whitish + sea */
+  --color-sea-deep: #0b5e5a;
+  --color-sea-abyss: #073e3a;
+  --color-emerald: #10897b;
+  --color-emerald-600: #0e7a6d;
+  --color-mint: #6fcf97;
+  --color-mint-soft: #a7e6c2;
+  --color-sea-glass: #dcefea;
+  --color-foam: #f6fbf9;
+  --color-sand: #fbf7ef;
+  --color-ink: #12332f;
+  --color-muted: #5b726e;
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+
+  /* Fonts (bound in layout.tsx via next/font variables) */
+  --font-display: var(--font-sora), ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-script: var(--font-kaushan), "Segoe Script", cursive;
+}
+
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-foam);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+/* Fluid display headings */
+.h-hero {
+  font-size: clamp(2.4rem, 6vw, 4.5rem);
+  font-weight: 700;
+}
+
+/* Elegant flowing script accent (reference-inspired) */
+.text-script {
+  font-family: var(--font-script);
+  font-weight: 400;
+  line-height: 1;
+  font-size: clamp(3rem, 9vw, 6.5rem);
+}
+
+/* Soft light halo so dark hero text stays legible over busy photos */
+.hero-legible {
+  text-shadow:
+    0 1px 2px rgba(255, 255, 255, 0.7),
+    0 2px 18px rgba(246, 251, 249, 0.85);
+}
+
+/* Decorative eyebrow divider: — label — with a centered glyph */
+.eyebrow-divider {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--color-emerald);
+}
+.eyebrow-divider::before,
+.eyebrow-divider::after {
+  content: "";
+  height: 1px;
+  width: clamp(1.5rem, 5vw, 3.5rem);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in srgb, var(--color-emerald) 60%, transparent)
+  );
+}
+.eyebrow-divider::after {
+  transform: scaleX(-1);
+}
+
+.h-section {
+  font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+  font-weight: 600;
+}
+
+/* Glassmorphism panel */
+.glass {
+  background: color-mix(in srgb, white 72%, transparent);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  border: 1px solid color-mix(in srgb, var(--color-sea-glass) 80%, transparent);
+  box-shadow: 0 8px 30px rgba(11, 94, 90, 0.08);
+}
+
+.glass-dark {
+  background: color-mix(in srgb, var(--color-sea-abyss) 40%, transparent);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+/* Emerald gradient used on hero + primary buttons */
+.brand-gradient {
+  background-image: linear-gradient(
+    135deg,
+    var(--color-emerald) 0%,
+    var(--color-sea-deep) 60%,
+    var(--color-sea-abyss) 100%
+  );
+}
+
+.text-gradient {
+  background-image: linear-gradient(
+    120deg,
+    var(--color-emerald),
+    var(--color-mint)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Hide scrollbar for horizontal scroll rails */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Reveal-on-scroll (CSS-only, no JS) */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  animation: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 28%;
+}
+
+/* Animated gradient underline for links */
+.link-underline {
+  position: relative;
+}
+.link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 2px;
+  width: 100%;
+  background-image: linear-gradient(90deg, var(--color-emerald), var(--color-mint));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.28s ease;
+}
+.link-underline:hover::after {
+  transform: scaleX(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    animation: none;
+  }
+}
