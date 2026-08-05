@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { WhatsApp } from "./icons";
-import { site } from "@/lib/data";
+import { site, asset } from "@/lib/data";
 
 const columns = [
   {
@@ -48,7 +48,7 @@ export default function Footer() {
             <div className="flex items-center gap-3">
               <span className="grid h-14 w-14 place-items-center rounded-2xl bg-white p-1.5">
                 <Image
-                  src="/logo.png"
+                  src={asset("/logo.png")}
                   alt={site.name}
                   width={56}
                   height={56}

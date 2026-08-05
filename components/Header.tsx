@@ -6,7 +6,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Button } from "./ui";
 import { WhatsApp, Menu, Close, Arrow } from "./icons";
-import { site, getToursByCategory, inr } from "@/lib/data";
+import { site, getToursByCategory, inr, asset } from "@/lib/data";
 
 type MenuDef = { label: string; href: string; cats: string[] };
 
@@ -27,7 +27,7 @@ function Logo() {
   return (
     <Link href="/" className="flex shrink-0 items-center gap-2.5">
       <Image
-        src="/logo.png"
+        src={asset("/logo.png")}
         alt={site.name}
         width={48}
         height={48}

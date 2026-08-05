@@ -67,6 +67,11 @@ export const site = {
 const img = (id: string, w = 1000) =>
   `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=80`;
 
+// Prefixes local (public/) asset paths with the deploy basePath so they
+// resolve correctly on GitHub Pages project URLs. No-op locally.
+export const asset = (path: string) =>
+  `${process.env.NEXT_PUBLIC_BASE_PATH || ""}${path}`;
+
 export const inr = (n: number) =>
   new Intl.NumberFormat("en-IN", {
     style: "currency",
@@ -113,7 +118,7 @@ export const categories: Category[] = [
     slug: "dudhsagar",
     name: "Dudhsagar",
     tagline: "Waterfall jeep safari",
-    image: "/dudhsagar.png",
+    image: asset("/dudhsagar.png"),
   },
   {
     slug: "adventure",
@@ -434,7 +439,7 @@ export const tours: Tour[] = [
     reviews: 189,
     price: 2000,
     strikePrice: 2500,
-    image: "/dudhsagar.png",
+    image: asset("/dudhsagar.png"),
     badge: "Popular",
     description:
       "A thrilling jeep safari to India's iconic Dudhsagar waterfall through the Bhagwan Mahavir sanctuary, combined with a spice plantation visit and lunch.",
