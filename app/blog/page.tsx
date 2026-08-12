@@ -9,7 +9,7 @@ import { Arrow } from "@/components/icons";
 export const metadata: Metadata = {
   title: `Travel Guide & Blog — ${site.name}`,
   description:
-    "Local Goa travel tips, budgets, hidden beaches and seasonal guides from the Holiday in Goa team.",
+    "Local Goa travel tips, budgets, hidden beaches and seasonal guides from the Holiday In Goa team.",
 };
 
 export default function BlogPage() {

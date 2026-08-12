@@ -14,7 +14,7 @@ export default function AboutPage() {
   return (
     <main>
       <PageHero
-        title="About Holiday in Goa"
+        title="About Holiday In Goa"
         subtitle={site.tagline}
         image={categories[4].image}
         crumbs={[{ label: "Home", href: "/" }, { label: "About" }]}

@@ -34,9 +34,9 @@ function Logo() {
         priority
         className="h-11 w-11 rounded-[12px] object-contain"
       />
-      <span className="hidden whitespace-nowrap font-[family-name:var(--font-display)] text-base font-bold leading-tight text-sea-deep sm:block">
-        Holiday in Goa
-        <span className="block text-[10px] font-medium uppercase tracking-[0.14em] text-emerald">
+      <span className="whitespace-nowrap font-[family-name:var(--font-display)] text-lg font-extrabold leading-tight tracking-tight text-sea-deep sm:text-xl">
+        Holiday In Goa
+        <span className="block text-[10px] font-semibold uppercase tracking-[0.16em] text-emerald">
           Tour &amp; Travels
         </span>
       </span>

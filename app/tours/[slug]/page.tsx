@@ -87,7 +87,7 @@ export default async function TourPage({
     .filter((t) => t.slug !== tour.slug)
     .slice(0, 3);
 
-  const bookMsg = `Hi Holiday in Goa, I'd like to book "${tour.title}" (${inr(
+  const bookMsg = `Hi Holiday In Goa, I'd like to book "${tour.title}" (${inr(
     tour.price,
   )} / person). Please share availability.`;
 

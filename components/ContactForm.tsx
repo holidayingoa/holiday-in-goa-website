@@ -13,7 +13,7 @@ export default function ContactForm() {
   const [message, setMessage] = useState("");
 
   const composed =
-    `Hi Holiday in Goa, I'd like to enquire.` +
+    `Hi Holiday In Goa, I'd like to enquire.` +
     (name ? `\nName: ${name}` : "") +
     (interest ? `\nInterested in: ${interest}` : "") +
     (date ? `\nDate: ${date}` : "") +

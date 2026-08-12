@@ -55,9 +55,9 @@ export default function Footer() {
                   className="h-full w-full object-contain"
                 />
               </span>
-              <span className="font-[family-name:var(--font-display)] text-lg font-bold leading-tight text-white">
-                Holiday in Goa
-                <span className="block text-xs font-medium uppercase tracking-[0.14em] text-mint">
+              <span className="font-[family-name:var(--font-display)] text-xl font-extrabold leading-tight tracking-tight text-white">
+                Holiday In Goa
+                <span className="block text-xs font-semibold uppercase tracking-[0.16em] text-mint">
                   Tour &amp; Travels
                 </span>
               </span>

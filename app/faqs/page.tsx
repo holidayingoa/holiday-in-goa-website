@@ -10,7 +10,7 @@ import { WhatsApp } from "@/components/icons";
 export const metadata: Metadata = {
   title: `FAQs — ${site.name}`,
   description:
-    "Frequently asked questions about booking Goa tours, payments, cancellations and customisation with Holiday in Goa.",
+    "Frequently asked questions about booking Goa tours, payments, cancellations and customisation with Holiday In Goa.",
 };
 
 const faqLd = {

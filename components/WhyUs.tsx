@@ -30,7 +30,7 @@ export default function WhyUs() {
     <div className="bg-sand py-20">
       <Section>
         <SectionHead
-          eyebrow="Why Holiday in Goa"
+          eyebrow="Why Holiday In Goa"
           title="Booked with confidence"
           align="center"
         >

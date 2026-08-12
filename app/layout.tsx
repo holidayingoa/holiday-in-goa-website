@@ -50,11 +50,11 @@ const organizationLd = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: "Holiday in Goa Tour & Travels — Cruises, Scuba, Tours & Packages",
+  title: "Holiday In Goa Tour & Travels — Cruises, Scuba, Tours & Packages",
   description:
-    "Book Goa's best cruises, scuba diving, water sports, Dudhsagar trips, sightseeing and holiday packages with Holiday in Goa Tour & Travels. Instant WhatsApp confirmation, free cancellation and secure payments.",
+    "Book Goa's best cruises, scuba diving, water sports, Dudhsagar trips, sightseeing and holiday packages with Holiday In Goa Tour & Travels. Instant WhatsApp confirmation, free cancellation and secure payments.",
   keywords: [
-    "Holiday in Goa",
+    "Holiday In Goa",
     "Goa tours",
     "Goa cruises",
     "scuba diving Goa",
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     "Goa tour packages",
   ],
   openGraph: {
-    title: "Holiday in Goa Tour & Travels",
+    title: "Holiday In Goa Tour & Travels",
     description:
       "Curated Goa experiences with instant confirmation and secure payments.",
     type: "website",
