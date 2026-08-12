@@ -43,6 +43,8 @@ export default function PageHero({
       ) : (
         <div className="absolute inset-0 brand-gradient" />
       )}
+      {/* Legibility scrim so text stays readable over any image */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/25 to-black/10" />
 
       <div className="relative mx-auto max-w-6xl px-5 pb-12 pt-28 sm:pb-16 sm:pt-32">
         <nav className="mb-3 flex flex-wrap items-center gap-1.5 text-sm text-white/80">
@@ -59,11 +61,13 @@ export default function PageHero({
             </span>
           ))}
         </nav>
-        <h1 className="font-[family-name:var(--font-display)] text-3xl font-bold text-white sm:text-5xl">
+        <h1 className="max-w-4xl text-balance break-words font-[family-name:var(--font-display)] text-[26px] font-bold leading-[1.1] text-white [text-shadow:0_2px_18px_rgba(0,0,0,0.4)] sm:text-4xl lg:text-5xl">
           {title}
         </h1>
         {subtitle && (
-          <p className="mt-3 max-w-xl text-white/85">{subtitle}</p>
+          <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-white [text-shadow:0_1px_10px_rgba(0,0,0,0.55)] sm:text-lg">
+            {subtitle}
+          </p>
         )}
       </div>
     </section>
