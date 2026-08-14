@@ -162,6 +162,96 @@ const genExclusions = [
 export const tours: Tour[] = [
   // Packages
   {
+    slug: "goa-luxury-escape-5d4n",
+    title: "Goa Luxury Escape — 5 Days / 4 Nights",
+    categorySlug: "packages",
+    category: "Tour Packages",
+    location: "North & South Goa",
+    duration: "5 Days / 4 Nights",
+    rating: 5.0,
+    reviews: 96,
+    price: 56999,
+    priceUnit: "couple",
+    image: img("photo-1582719478250-c89cae4dc85b"),
+    badge: "5-Star",
+    specs: [
+      { label: "Stay", value: "5-Star Hotel · 01 Premium Room · 4 Nights" },
+      { label: "Occupancy", value: "02 Adults" },
+      { label: "Meals", value: "Daily Breakfast" },
+      { label: "Vehicle", value: "Private AC Innova throughout" },
+    ],
+    description:
+      "Our flagship Goa holiday for couples who want the best — a 5-star stay with daily breakfast, a private AC Innova for all transfers and sightseeing, an exclusive couple dinner cruise party, and a full day of Grand Island scuba diving and water sports. Priced at ₹56,999 per couple.",
+    highlights: [
+      "5-star hotel stay in a premium room with breakfast",
+      "Private AC Innova for all transfers & sightseeing",
+      "Exclusive Couple Dinner Cruise Party with live dance shows",
+      "Grand Island scuba diving, water sports & snorkeling",
+    ],
+    itinerary: [
+      {
+        day: "Day 01",
+        title: "Arrival in Goa & Couple Dinner Cruise",
+        items: [
+          "Warm welcome & private AC Innova transfer to your 5-star hotel, check-in and leisure",
+          "Evening triple-deck dinner cruise: welcome drinks, starters, unlimited buffet dinner, 02 drinks & 02 tequila shots",
+          "Scenic route Panjim – Miramar – Old Goa with DJ and Goan, Bollywood, Hollywood & Portuguese dance shows",
+        ],
+      },
+      {
+        day: "Day 02",
+        title: "Private South Goa Experience (10 AM – 8 PM)",
+        items: [
+          "Miramar Beach, Dona Paula & Old Goa churches (Se Cathedral)",
+          "Mangeshi & Shantadurga temples, Panjim city & Fontainhas Latin Quarter",
+          "Wax Museum & Horror Show and Spice Plantation — all by private AC Innova",
+        ],
+      },
+      {
+        day: "Day 03",
+        title: "Grand Island Scuba Diving & Water Sports (8:30 AM – 5 PM)",
+        items: [
+          "Boat to Grand Island with breakfast, snacks & unlimited buffet lunch",
+          "Scuba diving with PADI guide, underwater photos & videos",
+          "Jet ski, banana, bumper, speed boat, parasailing, snorkeling & dolphin sighting",
+        ],
+      },
+      {
+        day: "Day 04",
+        title: "Private North Goa Experience (10 AM – 7 PM)",
+        items: [
+          "Fort Aguada, Sinquerim, Baga & Calangute beaches",
+          "Anjuna & Vagator beaches, Parra coconut road, Chauranginath temple",
+          "Thunder World, Arpora (Snow Park optional — extra charges)",
+        ],
+      },
+      {
+        day: "Day 05",
+        title: "Check-out & Departure",
+        items: [
+          "Breakfast and hotel check-out",
+          "Private AC Innova transfer to airport / railway / bus station",
+        ],
+      },
+    ],
+    inclusions: [
+      "04 nights at a 5-star hotel with daily buffet breakfast",
+      "Private AC Innova for airport transfers & all sightseeing",
+      "Hotel pickup & drop for Grand Island (AC mini bus)",
+      "Couple Dinner Cruise Party",
+      "Private South & North Goa sightseeing",
+      "Grand Island scuba diving, water sports & snorkeling",
+      "Fuel, tolls, parking, interstate taxes & driver allowance",
+      "Free Wi-Fi, hot water & room service",
+    ],
+    exclusions: [
+      "Dolphin trip & evening cruise on Day 02 (extra charges)",
+      "Snow Park entry on Day 04 (extra charges)",
+      "Executive deck, hookah, photoshoot & event arrangements (optional add-ons)",
+      "Lunch & dinner except where mentioned, personal expenses & tips",
+    ],
+  },
+  {
     slug: "goa-luxury-holiday-5d4n",
     title: "Goa Premium Luxury Holiday Package — 5 Days / 4 Nights",
     categorySlug: "packages",
