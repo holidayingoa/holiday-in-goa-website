@@ -1,11 +1,12 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Button } from "./ui";
 import { WhatsApp, Menu, Close, Arrow } from "./icons";
+import LanguageSelector from "./LanguageSelector";
 import { site, getToursByCategory, inr, asset } from "@/lib/data";
 
 type MenuDef = { label: string; href: string; cats: string[] };
@@ -27,12 +28,12 @@ function Logo() {
   return (
     <Link href="/" className="flex shrink-0 items-center gap-2.5">
       <Image
-        src={asset("/logo.png")}
+        src={asset("/logo-emblem.png")}
         alt={site.name}
         width={48}
         height={48}
         priority
-        className="h-11 w-11 rounded-[12px] object-contain"
+        className="h-11 w-11 rounded-[12px]"
       />
       <span className="whitespace-nowrap font-[family-name:var(--font-display)] text-lg font-extrabold leading-tight tracking-tight text-sea-deep sm:text-xl">
         Holiday In Goa
@@ -48,6 +49,8 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [openMenu, setOpenMenu] = useState<string | null>(null);
+  const [collapsed, setCollapsed] = useState(false);
+  const navRef = useRef<HTMLElement>(null);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -55,6 +58,43 @@ export default function Header() {
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Collapse the desktop nav into the hamburger menu whenever the (possibly
+  // translated) labels don't fit on one line — keeps the header tidy in any
+  // language instead of cramming labels edge-to-edge.
+  useEffect(() => {
+    const nav = navRef.current;
+    if (!nav) return;
+    let raf = 0;
+    const measure = () => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => {
+        if (!window.matchMedia("(min-width: 1024px)").matches) {
+          setCollapsed(false);
+          return;
+        }
+        const items = Array.from(nav.children) as HTMLElement[];
+        const required = items.reduce(
+          (sum, el, i) => sum + el.offsetWidth + (i > 0 ? 2 : 0),
+          0,
+        );
+        setCollapsed(required > nav.clientWidth + 8);
+      });
+    };
+    measure();
+    window.addEventListener("resize", measure);
+    const mo = new MutationObserver(measure);
+    mo.observe(nav, { childList: true, subtree: true, characterData: true });
+    const t1 = setTimeout(measure, 1200);
+    const t2 = setTimeout(measure, 3000);
+    return () => {
+      window.removeEventListener("resize", measure);
+      mo.disconnect();
+      cancelAnimationFrame(raf);
+      clearTimeout(t1);
+      clearTimeout(t2);
+    };
   }, []);
 
   useEffect(() => {
@@ -81,11 +121,18 @@ export default function Header() {
           : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-5">
         <Logo />
 
-        {/* Desktop nav with dropdowns */}
-        <nav className="hidden items-center gap-0.5 lg:flex">
+        {/* Desktop nav with dropdowns — flex-1 + min-w-0 lets it shrink so long
+            translated labels never push the logo or language switcher off-screen.
+            When the labels don't fit, it collapses to the hamburger menu. */}
+        <nav
+          ref={navRef}
+          className={`hidden min-w-0 flex-1 items-center justify-end gap-0.5 lg:flex ${
+            collapsed ? "lg:pointer-events-none lg:opacity-0" : ""
+          }`}
+        >
           {menus.map((menu) => {
             const isOpen = openMenu === menu.href;
             return (
@@ -164,7 +211,7 @@ export default function Header() {
                               <span className="mt-0.5 block text-xs text-muted">
                                 {t.duration} ·{" "}
                                 <span className="font-semibold text-emerald">
-                                  {inr(t.price)}
+                                  {t.priceOnRequest ? "On request" : inr(t.price)}
                                 </span>
                               </span>
                             </span>
@@ -195,18 +242,27 @@ export default function Header() {
           </Link>
         </nav>
 
-        <button
-          className="grid h-10 w-10 place-items-center rounded-full bg-white/70 text-sea-deep lg:hidden"
-          onClick={() => setOpen(true)}
-          aria-label="Open menu"
-        >
-          <Menu />
-        </button>
+        <div className="flex shrink-0 items-center gap-2">
+          <LanguageSelector />
+          <button
+            className={`grid h-10 w-10 place-items-center rounded-full bg-white/70 text-sea-deep ${
+              collapsed ? "" : "lg:hidden"
+            }`}
+            onClick={() => setOpen(true)}
+            aria-label="Open menu"
+          >
+            <Menu />
+          </button>
+        </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile / collapsed menu */}
       {open && (
-        <div className="fixed inset-0 z-50 overflow-y-auto bg-foam/97 backdrop-blur-xl lg:hidden">
+        <div
+          className={`fixed inset-0 z-50 overflow-y-auto bg-foam/97 backdrop-blur-xl ${
+            collapsed ? "" : "lg:hidden"
+          }`}
+        >
           <div className="flex h-16 items-center justify-between px-5">
             <Logo />
             <button
@@ -254,7 +310,7 @@ export default function Header() {
                           <span className="mt-0.5 block text-xs text-muted">
                             {t.duration} ·{" "}
                             <span className="font-semibold text-emerald">
-                              {inr(t.price)}
+                              {t.priceOnRequest ? "On request" : inr(t.price)}
                             </span>
                           </span>
                         </span>

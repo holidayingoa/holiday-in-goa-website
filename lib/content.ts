@@ -120,7 +120,7 @@ export const faqs: Faq[] = [
   },
   {
     q: "Do I need to pay online to book?",
-    a: "No online payment is required to enquire. We confirm your details first, then share secure payment options (UPI, cards, wallets via Razorpay) or an advance as needed.",
+    a: "No online payment is required to enquire. We confirm your details first, then share secure payment options (UPI, cards and wallets) or an advance as needed.",
   },
   {
     q: "Are the prices per person?",

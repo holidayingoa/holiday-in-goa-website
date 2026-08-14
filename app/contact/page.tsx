@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { site, categories } from "@/lib/data";
-import { Section, Button } from "@/components/ui";
+import { Section } from "@/components/ui";
 import PageHero from "@/components/PageHero";
 import ContactForm from "@/components/ContactForm";
 import { WhatsApp, Pin, Clock } from "@/components/icons";
@@ -82,6 +82,7 @@ export default function ContactPage() {
         subtitle="Questions, custom itineraries or group bookings — our Goa team is available 24x7."
         image={categories[1].image}
         crumbs={[{ label: "Home", href: "/" }, { label: "Contact" }]}
+        subtitleNoWrap
       />
 
       <Section className="py-16">
@@ -118,12 +119,6 @@ export default function ContactPage() {
             <div className="mt-6 flex items-center gap-3 rounded-[var(--radius-lg)] bg-sand p-4 text-sm text-muted">
               <Clock size={18} className="text-emerald" />
               Available 24x7, Monday to Sunday
-            </div>
-
-            <div className="mt-4">
-              <Button href={site.whatsappUrl} variant="whatsapp" size="lg">
-                <WhatsApp /> Chat on WhatsApp
-              </Button>
             </div>
           </div>
 

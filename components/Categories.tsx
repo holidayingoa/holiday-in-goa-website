@@ -7,13 +7,19 @@ import SectionHead from "./SectionHead";
 export default function Categories() {
   return (
     <Section id="categories" className="py-20">
-      <SectionHead eyebrow="Browse by type" title="Popular experiences">
+      <SectionHead
+        eyebrow="Browse by type"
+        title="Popular experiences"
+        subtitleNoWrap
+      >
         Handpicked activities across North and South Goa — something for every
         kind of traveller.
       </SectionHead>
 
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-        {categories.map((cat) => (
+        {categories
+          .filter((cat) => cat.slug !== "packages")
+          .map((cat) => (
           <Link
             key={cat.slug}
             href={`/category/${cat.slug}`}

@@ -1,0 +1,16 @@
+<svg width="1024" height="1024" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Holiday In Goa">
+  <defs>
+    <linearGradient id="o2" x1="12" y1="8" x2="116" y2="120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#12A091"/>
+      <stop offset="1" stop-color="#0B5E5A"/>
+    </linearGradient>
+    <clipPath id="o2c"><rect width="128" height="128" rx="28"/></clipPath>
+  </defs>
+  <g clip-path="url(#o2c)">
+    <rect width="128" height="128" rx="28" fill="url(#o2)"/>
+    <circle cx="64" cy="50" r="19" fill="#FFC978"/>
+    <path d="M6 78 q 14.5 -11 29 0 t 29 0 t 29 0 t 29 0" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" fill="none"/>
+    <path d="M6 92 q 14.5 -11 29 0 t 29 0 t 29 0 t 29 0" stroke="#A7E6C2" stroke-width="5" stroke-linecap="round" fill="none"/>
+    <path d="M6 106 q 14.5 -11 29 0 t 29 0 t 29 0 t 29 0" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" fill="none"/>
+  </g>
+</svg>

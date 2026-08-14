@@ -6,7 +6,7 @@ import { Shield, Bolt, Coins, Anchor } from "./icons";
 const trust = [
   { icon: Bolt, label: "Instant WhatsApp confirmation" },
   { icon: Shield, label: "Free cancellation" },
-  { icon: Coins, label: "Secure Razorpay payments" },
+  { icon: Coins, label: "Secure payments" },
 ];
 
 export default function Hero() {

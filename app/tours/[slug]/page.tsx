@@ -7,6 +7,7 @@ import {
   getTour,
   getCategory,
   getToursByCategory,
+  hasBoatSafety,
   inr,
   site,
   whatsapp,
@@ -87,9 +88,11 @@ export default async function TourPage({
     .filter((t) => t.slug !== tour.slug)
     .slice(0, 3);
 
-  const bookMsg = `Hi Holiday In Goa, I'd like to book "${tour.title}" (${inr(
-    tour.price,
-  )} / person). Please share availability.`;
+  const bookMsg = tour.priceOnRequest
+    ? `Hi Holiday In Goa, I'd like to know the price and availability for "${tour.title}". Please share details.`
+    : `Hi Holiday In Goa, I'd like to book "${tour.title}" (${inr(
+        tour.price,
+      )} / person). Please share availability.`;
 
   const productLd = {
     "@context": "https://schema.org",
@@ -104,13 +107,17 @@ export default async function TourPage({
       ratingValue: tour.rating,
       reviewCount: tour.reviews,
     },
-    offers: {
-      "@type": "Offer",
-      price: tour.price,
-      priceCurrency: "INR",
-      availability: "https://schema.org/InStock",
-      url: `${site.url}/tours/${tour.slug}`,
-    },
+    ...(tour.priceOnRequest
+      ? {}
+      : {
+          offers: {
+            "@type": "Offer",
+            price: tour.price,
+            priceCurrency: "INR",
+            availability: "https://schema.org/InStock",
+            url: `${site.url}/tours/${tour.slug}`,
+          },
+        }),
   };
 
   return (
@@ -153,6 +160,33 @@ export default async function TourPage({
                 <Clock size={15} /> {tour.duration}
               </span>
             </div>
+
+            {tour.specs && tour.specs.length > 0 && (
+              <div className="mt-5 grid gap-3 sm:grid-cols-2">
+                {tour.specs.map((s) => (
+                  <div
+                    key={s.label}
+                    className="rounded-[var(--radius-md)] border border-sea-glass bg-white px-4 py-3"
+                  >
+                    <p className="text-xs uppercase tracking-wider text-muted">
+                      {s.label}
+                    </p>
+                    <p className="mt-0.5 font-medium text-sea-deep">{s.value}</p>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {hasBoatSafety(tour.slug) && (
+              <div className="mt-5 flex items-start gap-3 rounded-[var(--radius-md)] border border-mint-soft bg-mint-soft/20 px-4 py-3 text-sm text-sea-deep">
+                <Shield size={18} className="mt-0.5 shrink-0 text-emerald" />
+                <p>
+                  <span className="font-semibold">Your safety first:</span> our
+                  boats carry British safety-standard life jackets and are
+                  government-licensed.
+                </p>
+              </div>
+            )}
 
             <h2 className="mt-8 font-[family-name:var(--font-display)] text-2xl font-semibold text-sea-deep">
               Overview
@@ -201,15 +235,28 @@ export default async function TourPage({
           {/* Right: sticky booking card */}
           <aside className="lg:sticky lg:top-24 lg:self-start">
             <div className="glass rounded-[var(--radius-lg)] p-6">
-              <p className="text-sm text-muted">From</p>
-              <p className="font-[family-name:var(--font-display)] text-3xl font-bold text-ink">
-                {inr(tour.price)}
-                <span className="text-base font-normal text-muted"> / person</span>
+              <p className="text-sm text-muted">
+                {tour.priceOnRequest ? "Pricing" : "From"}
               </p>
-              {tour.strikePrice && (
-                <p className="mt-1 text-sm text-muted line-through">
-                  {inr(tour.strikePrice)}
+              {tour.priceOnRequest ? (
+                <p className="font-[family-name:var(--font-display)] text-3xl font-bold text-ink">
+                  On request
                 </p>
+              ) : (
+                <>
+                  <p className="font-[family-name:var(--font-display)] text-3xl font-bold text-ink">
+                    {inr(tour.price)}
+                    <span className="text-base font-normal text-muted">
+                      {" "}
+                      / person
+                    </span>
+                  </p>
+                  {tour.strikePrice && (
+                    <p className="mt-1 text-sm text-muted line-through">
+                      {inr(tour.strikePrice)}
+                    </p>
+                  )}
+                </>
               )}
 
               <div className="my-5 h-px bg-sea-glass" />

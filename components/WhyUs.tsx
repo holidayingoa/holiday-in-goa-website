@@ -1,12 +1,17 @@
 import { Section } from "./ui";
 import SectionHead from "./SectionHead";
-import { Pin, Coins, Shield, WhatsApp } from "./icons";
+import { Pin, Coins, Shield, WhatsApp, Anchor } from "./icons";
 
 const features = [
   {
     icon: Pin,
     title: "Local experts",
     text: "Every tour is run and vetted by trusted Goa operators we know personally.",
+  },
+  {
+    icon: Anchor,
+    title: "Safety first",
+    text: "British safety-standard life jackets and government-licensed boats on every water experience.",
   },
   {
     icon: Coins,
@@ -38,7 +43,7 @@ export default function WhyUs() {
           can just enjoy Goa.
         </SectionHead>
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
           {features.map(({ icon: Icon, title, text }) => (
             <div
               key={title}

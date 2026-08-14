@@ -8,11 +8,13 @@ export default function PageHero({
   subtitle,
   image,
   crumbs,
+  subtitleNoWrap = false,
 }: {
   title: string;
   subtitle?: string;
   image?: string;
   crumbs: { label: string; href?: string }[];
+  subtitleNoWrap?: boolean;
 }) {
   const breadcrumbLd = {
     "@context": "https://schema.org",
@@ -65,7 +67,11 @@ export default function PageHero({
           {title}
         </h1>
         {subtitle && (
-          <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-white [text-shadow:0_1px_10px_rgba(0,0,0,0.55)] sm:text-lg">
+          <p
+            className={`mt-4 text-[15px] leading-relaxed text-white [text-shadow:0_1px_10px_rgba(0,0,0,0.55)] sm:text-lg ${
+              subtitleNoWrap ? "max-w-none lg:whitespace-nowrap" : "max-w-2xl"
+            }`}
+          >
             {subtitle}
           </p>
         )}

@@ -36,15 +36,29 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden; /* fallback */
+  overflow-x: clip; /* clip avoids breaking position: sticky */
 }
 
 body {
   margin: 0;
+  max-width: 100%;
+  overflow-x: hidden; /* fallback */
+  overflow-x: clip;
   background-color: var(--color-foam);
   color: var(--color-ink);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  /* Let long translated words break instead of overflowing containers */
+  overflow-wrap: break-word;
+}
+
+/* Media never forces horizontal overflow */
+img,
+video,
+iframe {
+  max-width: 100%;
 }
 
 h1,
@@ -194,4 +208,36 @@ h4 {
   .reveal {
     animation: none;
   }
+}
+
+/* ---------------- Google Translate language widget ---------------- */
+/* Hide Google's injected top banner and stop it from shifting the page */
+.goog-te-banner-frame,
+.goog-te-banner-frame.skiptranslate,
+iframe.skiptranslate {
+  display: none !important;
+  visibility: hidden !important;
+}
+body {
+  top: 0 !important;
+  position: static !important;
+}
+.goog-tooltip,
+.goog-tooltip:hover {
+  display: none !important;
+}
+.goog-text-highlight {
+  background: none !important;
+  box-shadow: none !important;
+}
+
+/* The raw Google widget is driven programmatically by our custom
+   dropdown, so keep it in the DOM but hidden from view. */
+#google_translate_element {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  pointer-events: none;
 }

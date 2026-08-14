@@ -62,13 +62,21 @@ export default function TourCard({
 
         <div className="mt-4 flex items-end justify-between border-t border-sea-glass pt-4">
           <div>
-            <p className="text-xs text-muted">From</p>
+            <p className="text-xs text-muted">
+              {tour.priceOnRequest ? "Pricing" : "From"}
+            </p>
             <p className="font-[family-name:var(--font-display)] text-lg font-bold text-ink">
-              {inr(tour.price)}
-              {tour.strikePrice && (
-                <span className="ml-1.5 text-xs font-normal text-muted line-through">
-                  {inr(tour.strikePrice)}
-                </span>
+              {tour.priceOnRequest ? (
+                "On request"
+              ) : (
+                <>
+                  {inr(tour.price)}
+                  {tour.strikePrice && (
+                    <span className="ml-1.5 text-xs font-normal text-muted line-through">
+                      {inr(tour.strikePrice)}
+                    </span>
+                  )}
+                </>
               )}
             </p>
           </div>

@@ -46,13 +46,13 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-[1.6fr_1fr_1fr_1fr]">
           <div>
             <div className="flex items-center gap-3">
-              <span className="grid h-14 w-14 place-items-center rounded-2xl bg-white p-1.5">
+              <span className="h-14 w-14 shrink-0 overflow-hidden rounded-2xl">
                 <Image
-                  src={asset("/logo.png")}
+                  src={asset("/logo-emblem.png")}
                   alt={site.name}
                   width={56}
                   height={56}
-                  className="h-full w-full object-contain"
+                  className="h-full w-full object-cover"
                 />
               </span>
               <span className="font-[family-name:var(--font-display)] text-xl font-extrabold leading-tight tracking-tight text-white">
@@ -67,7 +67,7 @@ export default function Footer() {
               and secure payments.
             </p>
 
-            <div className="mt-5 space-y-1.5 text-sm text-white/75">
+            <div className="mt-5 space-y-1.5 break-words text-sm text-white/75">
               <p>
                 <span className="text-white/50">Contact:</span>{" "}
                 <a href={`tel:${site.phoneRaw}`} className="hover:text-mint">
@@ -123,9 +123,6 @@ export default function Footer() {
           </p>
           <div className="flex items-center gap-3 text-xs text-white/50">
             <span>Secure payments</span>
-            <span className="rounded bg-white/10 px-2 py-1 font-semibold text-white/80">
-              Razorpay
-            </span>
             <span className="rounded bg-white/10 px-2 py-1 font-semibold text-white/80">
               UPI
             </span>
