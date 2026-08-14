@@ -18,6 +18,8 @@ export type Tour = {
   price: number;
   strikePrice?: number;
   priceOnRequest?: boolean;
+  /** Pricing unit shown after the price (defaults to "person"). */
+  priceUnit?: string;
   image: string;
   badge?: string;
   specs?: { label: string; value: string }[];
@@ -25,6 +27,8 @@ export type Tour = {
   highlights: string[];
   inclusions: string[];
   exclusions: string[];
+  /** Optional day-by-day plan for multi-day packages. */
+  itinerary?: { day: string; title: string; items: string[] }[];
 };
 
 export type Review = {
@@ -157,6 +161,95 @@ const genExclusions = [
 
 export const tours: Tour[] = [
   // Packages
+  {
+    slug: "goa-premium-holiday-5d4n",
+    title: "Goa Premium Holiday Package — 5 Days / 4 Nights",
+    categorySlug: "packages",
+    category: "Tour Packages",
+    location: "North & South Goa",
+    duration: "5 Days / 4 Nights",
+    rating: 4.9,
+    reviews: 187,
+    price: 20999,
+    priceUnit: "couple",
+    image: img("photo-1507525428034-b723cf961d3e"),
+    badge: "Premium",
+    specs: [
+      { label: "Stay", value: "3-Star Premium Hotel · 4 Nights" },
+      { label: "Occupancy", value: "01 Room · 02 Adults" },
+      { label: "Meals", value: "Daily Breakfast" },
+      { label: "Transfers", value: "AC transport + Airport pickup & drop" },
+    ],
+    description:
+      "A complete 5-day Goa holiday for two — a premium 3-star stay with daily breakfast, a couple dinner cruise party, North & South Goa sightseeing, and a full day of Grand Island scuba diving and water sports. Airport transfers and AC transport throughout, priced at ₹20,999 per couple.",
+    highlights: [
+      "Exclusive Couple Dinner Cruise Party with DJ & dance shows",
+      "Grand Island scuba diving + water sports day",
+      "North & South Goa sightseeing by AC coach",
+      "Airport / railway transfers & AC transport included",
+    ],
+    itinerary: [
+      {
+        day: "Day 01",
+        title: "Arrival in Goa & Couple Dinner Cruise",
+        items: [
+          "Welcome & AC sedan transfer to hotel, check-in and freshen up",
+          "Evening couple dinner cruise: welcome drink, starters, unlimited buffet dinner & selected drinks",
+          "Triple-deck cruise (Panjim – Miramar – Old Goa) with DJ, Goan, Bollywood & Portuguese dance shows",
+        ],
+      },
+      {
+        day: "Day 02",
+        title: "South Goa Sightseeing (10 AM – 8 PM)",
+        items: [
+          "Miramar Beach, Dona Paula & Old Goa churches (Se Cathedral)",
+          "Mangeshi & Shantadurga temples, Panjim city & Fontainhas Latin Quarter",
+          "Spice Plantation and Wax Museum & Horror Show",
+        ],
+      },
+      {
+        day: "Day 03",
+        title: "Grand Island Scuba Diving & Water Sports (8:30 AM – 5 PM)",
+        items: [
+          "Boat to Grand Island with breakfast, snacks & unlimited buffet lunch",
+          "Scuba diving with PADI guide, underwater photos & videos",
+          "Jet ski, banana, bumper, speed boat, parasailing, snorkeling & dolphin sighting",
+        ],
+      },
+      {
+        day: "Day 04",
+        title: "North Goa Sightseeing (10 AM – 7 PM)",
+        items: [
+          "Fort Aguada, Sinquerim, Calangute & Baga beaches",
+          "Anjuna & Vagator beaches, Parra coconut road, Chauranginath temple",
+          "Thunder World, Arpora (Snow Park optional — extra charges)",
+        ],
+      },
+      {
+        day: "Day 05",
+        title: "Check-out & Departure",
+        items: [
+          "Breakfast and hotel check-out",
+          "Comfortable transfer to airport / railway / bus station",
+        ],
+      },
+    ],
+    inclusions: [
+      "04 nights in a 3-star hotel with daily buffet breakfast",
+      "Airport / railway transfers + AC transport throughout",
+      "Couple Dinner Cruise Party",
+      "South & North Goa sightseeing",
+      "Grand Island scuba diving, water sports & snorkeling",
+      "Fuel, tolls, parking, interstate taxes & driver allowance",
+      "Free Wi-Fi, hot water & room service",
+    ],
+    exclusions: [
+      "Dolphin trip & evening cruise on Day 02 (extra charges)",
+      "Snow Park entry on Day 04 (extra charges)",
+      "Lunch & dinner except where mentioned",
+      "Personal expenses, tips and anything not in inclusions",
+    ],
+  },
   {
     slug: "goa-3n4d-couple",
     title: "3 Nights / 4 Days Goa Package for Couples",

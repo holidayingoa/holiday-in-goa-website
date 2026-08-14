@@ -88,11 +88,12 @@ export default async function TourPage({
     .filter((t) => t.slug !== tour.slug)
     .slice(0, 3);
 
+  const priceUnit = tour.priceUnit ?? "person";
   const bookMsg = tour.priceOnRequest
     ? `Hi Holiday In Goa, I'd like to know the price and availability for "${tour.title}". Please share details.`
     : `Hi Holiday In Goa, I'd like to book "${tour.title}" (${inr(
         tour.price,
-      )} / person). Please share availability.`;
+      )} / ${priceUnit}). Please share availability.`;
 
   const productLd = {
     "@context": "https://schema.org",
@@ -204,6 +205,38 @@ export default async function TourPage({
               ))}
             </ul>
 
+            {tour.itinerary && tour.itinerary.length > 0 && (
+              <>
+                <h2 className="mt-8 font-[family-name:var(--font-display)] text-2xl font-semibold text-sea-deep">
+                  Day-by-day itinerary
+                </h2>
+                <ol className="mt-4 space-y-4">
+                  {tour.itinerary.map((d) => (
+                    <li
+                      key={d.day}
+                      className="relative rounded-[var(--radius-lg)] border border-sea-glass bg-white p-5"
+                    >
+                      <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                        <span className="rounded-[var(--radius-pill)] bg-mint-soft/40 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-emerald">
+                          {d.day}
+                        </span>
+                        <h3 className="font-[family-name:var(--font-display)] text-lg font-semibold text-sea-deep">
+                          {d.title}
+                        </h3>
+                      </div>
+                      <ul className="mt-3 space-y-2 text-sm text-ink/90">
+                        {d.items.map((it) => (
+                          <li key={it} className="flex items-start gap-2">
+                            <Check /> {it}
+                          </li>
+                        ))}
+                      </ul>
+                    </li>
+                  ))}
+                </ol>
+              </>
+            )}
+
             <div className="mt-8 grid gap-6 sm:grid-cols-2">
               <div className="rounded-[var(--radius-lg)] border border-sea-glass bg-white p-5">
                 <h3 className="mb-3 font-[family-name:var(--font-display)] text-lg font-semibold text-sea-deep">
@@ -248,7 +281,7 @@ export default async function TourPage({
                     {inr(tour.price)}
                     <span className="text-base font-normal text-muted">
                       {" "}
-                      / person
+                      / {priceUnit}
                     </span>
                   </p>
                   {tour.strikePrice && (

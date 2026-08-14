@@ -71,6 +71,12 @@ export default function TourCard({
               ) : (
                 <>
                   {inr(tour.price)}
+                  {tour.priceUnit && tour.priceUnit !== "person" && (
+                    <span className="text-xs font-normal text-muted">
+                      {" "}
+                      / {tour.priceUnit}
+                    </span>
+                  )}
                   {tour.strikePrice && (
                     <span className="ml-1.5 text-xs font-normal text-muted line-through">
                       {inr(tour.strikePrice)}
