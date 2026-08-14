@@ -460,6 +460,88 @@ export const tours: Tour[] = [
     exclusions: genExclusions,
   },
   {
+    slug: "goa-essential-escape-4d3n",
+    title: "Goa Essential Escape — 4 Days / 3 Nights",
+    categorySlug: "packages",
+    category: "Tour Packages",
+    location: "North & South Goa",
+    duration: "4 Days / 3 Nights",
+    rating: 4.6,
+    reviews: 231,
+    price: 12999,
+    priceUnit: "couple",
+    image: img("photo-1512343879784-a960bf40e7f2"),
+    badge: "Value",
+    specs: [
+      { label: "Stay", value: "2-Star Hotel · 3 Nights" },
+      { label: "Occupancy", value: "01 Room · 02 Adults" },
+      { label: "Transfers", value: "AC Sedan + AC Mini Coach sightseeing" },
+      { label: "Includes", value: "Dinner Cruise + Grand Island" },
+    ],
+    description:
+      "An affordable yet complete Goa holiday for two — comfortable 2-star stay, a couple dinner cruise party, South & North Goa sightseeing, and a full day of Grand Island scuba diving and water sports. All transfers included, priced at ₹12,999 per couple.",
+    highlights: [
+      "Great-value 4D/3N Goa holiday for two",
+      "Couple Dinner Cruise Party with live dance shows",
+      "South & North Goa sightseeing by AC coach",
+      "Grand Island scuba diving, water sports & snorkeling",
+    ],
+    itinerary: [
+      {
+        day: "Day 01",
+        title: "Arrival in Goa & Couple Dinner Cruise",
+        items: [
+          "AC sedan transfer to hotel, check-in and leisure",
+          "Evening triple-deck dinner cruise: welcome drinks, starters, unlimited buffet dinner, 02 drinks & 02 tequila shots",
+          "Scenic route Panjim – Miramar – Old Goa with DJ and Goan, Bollywood, Hollywood & Portuguese dance shows",
+        ],
+      },
+      {
+        day: "Day 02",
+        title: "South Goa Sightseeing (10 AM – 8 PM)",
+        items: [
+          "Miramar Beach, Dona Paula & Old Goa churches (Se Cathedral)",
+          "Mangeshi & Shantadurga temples, Panjim city & Fontainhas Latin Quarter",
+          "Wax Museum & Horror Show and Spice Plantation",
+        ],
+      },
+      {
+        day: "Day 03",
+        title: "Grand Island Scuba Diving & Water Sports (8:30 AM – 5 PM)",
+        items: [
+          "Boat to Grand Island with breakfast, snacks & unlimited buffet lunch",
+          "Scuba diving with PADI guide, underwater photos & videos",
+          "Jet ski, banana, bumper, speed boat, parasailing, snorkeling & dolphin sighting",
+        ],
+      },
+      {
+        day: "Day 04",
+        title: "North Goa Sightseeing & Departure (10 AM – 7 PM)",
+        items: [
+          "Check-out, then Fort Aguada, Sinquerim, Baga & Calangute beaches",
+          "Anjuna & Vagator beaches, Parra coconut road, Chauranginath temple, Thunder World (Snow Park optional — extra charges)",
+          "Transfer to airport / railway / bus station",
+        ],
+      },
+    ],
+    inclusions: [
+      "03 nights hotel accommodation",
+      "Airport / railway transfers by AC sedan",
+      "AC mini coach for sightseeing; AC mini bus for cruise & Grand Island",
+      "Couple Dinner Cruise Party",
+      "South & North Goa sightseeing",
+      "Grand Island scuba diving, water sports & snorkeling",
+      "Fuel, tolls, parking, interstate taxes & driver allowance",
+      "Free Wi-Fi, hot water & room service",
+    ],
+    exclusions: [
+      "Dolphin trip & evening cruise on Day 02 (extra charges)",
+      "Snow Park entry on Day 04 (extra charges)",
+      "Executive deck, hookah, photoshoot & event arrangements (optional add-ons)",
+      "Meals except where mentioned, personal expenses & tips",
+    ],
+  },
+  {
     slug: "goa-4n5d-family",
     title: "4 Nights / 5 Days Goa Package for Family",
     categorySlug: "packages",
