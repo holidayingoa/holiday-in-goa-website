@@ -1176,6 +1176,7 @@ export const tours: Tour[] = [
       asset("/boat-upper-deck-crowd.jpg"),
       asset("/adv-boat-tour.jpg"),
       asset("/boat-kayaks-alongside.jpg"),
+      asset("/paradise-cruise-river.jpg"),
       asset("/ws-banana-boat.jpg"),
       asset("/ws-jet-ski.jpg"),
       asset("/ws-speed-boat.jpg"),
