@@ -1171,8 +1171,11 @@ export const tours: Tour[] = [
     reviews: 174,
     price: 1499,
     strikePrice: 2500,
-    image: asset("/adv-boat-tour.jpg"),
+    image: asset("/boat-h2o-adventure.jpg"),
     gallery: [
+      asset("/boat-upper-deck-crowd.jpg"),
+      asset("/adv-boat-tour.jpg"),
+      asset("/boat-kayaks-alongside.jpg"),
       asset("/ws-banana-boat.jpg"),
       asset("/ws-jet-ski.jpg"),
       asset("/ws-speed-boat.jpg"),
