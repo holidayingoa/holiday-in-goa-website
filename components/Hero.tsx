@@ -31,7 +31,7 @@ export default function Hero() {
         <div className="relative h-[26rem] w-[19rem]">
           <div className="absolute right-0 top-2 h-[22rem] w-64 rotate-3 overflow-hidden rounded-[var(--radius-lg)] border-4 border-white shadow-[0_20px_50px_rgba(11,94,90,0.25)]">
             <Image
-              src={asset("/dudhsagar.png")}
+              src={asset("/dudhsagar-railway-bridge.jpg")}
               alt="Dudhsagar Waterfall, Goa"
               fill
               sizes="256px"
