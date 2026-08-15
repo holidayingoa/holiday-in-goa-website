@@ -1234,7 +1234,7 @@ export const tours: Tour[] = [
     duration: "2 hours",
     rating: 4.5,
     reviews: 156,
-    price: 500,
+    price: 499,
     strikePrice: 999,
     image: asset("/kayak-mangrove-couple.jpg"),
     description:
@@ -1270,7 +1270,7 @@ export const tours: Tour[] = [
     duration: "5–15 min slots",
     rating: 4.7,
     reviews: 88,
-    price: 2500,
+    price: 2499,
     image: asset("/flyboard-chapora.jpg"),
     gallery: [
       asset("/flyboard-goa-coast.jpg"),
@@ -1281,10 +1281,10 @@ export const tours: Tour[] = [
     ],
     badge: "Adrenaline",
     description:
-      "The most adventurous water sport in Goa — strap into a water-jet powered flyboard and rise above the Chapora River like a superhero, guided by a certified instructor. Choose a single or tandem slot. Single: 15 min ₹3,600 / 10 min ₹2,500. Tandem/Double (weight below 50 kg): 10 min ₹5,000 / 5 min ₹3,000.",
+      "The most adventurous water sport in Goa — strap into a water-jet powered flyboard and rise above the Chapora River like a superhero, guided by a certified instructor. Choose a single or tandem slot. Single: 15 min ₹3,600 / 10 min ₹2,499. Tandem/Double (weight below 50 kg): 10 min ₹5,000 / 5 min ₹3,000.",
     highlights: [
       "Water-jet powered flight above the river",
-      "Single: 15 min ₹3,600 · 10 min ₹2,500",
+      "Single: 15 min ₹3,600 · 10 min ₹2,499",
       "Tandem/Double (below 50 kg): 10 min ₹5,000 · 5 min ₹3,000",
       "Photos & videos included",
     ],
