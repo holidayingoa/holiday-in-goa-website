@@ -725,8 +725,13 @@ export const tours: Tour[] = [
       "Pickup & drop (Arpora, Baga, Calangute, Candolim, Sinquerim, Nerul)",
       "1 welcome drink",
       "2 drinks (beer / hard drink / soft drink)",
+      "Plated snacks (veg & non-veg)",
       "Buffet dinner (veg & non-veg)",
       "Non-stop Bollywood DJ, dance floor & live performances",
+      "Fun games & exciting prizes",
+      "Private table seating per booking",
+      "Bar counters on board",
+      "Separate washrooms for men & women",
     ],
     exclusions: [
       "Tequila shots (not available on Nirvana)",
