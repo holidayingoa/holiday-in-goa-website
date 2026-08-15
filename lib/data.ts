@@ -69,6 +69,7 @@ export const site = {
   whatsappDisplay: "+91 78753 33306",
   email: "holidayingoatourandtravel@gmail.com",
   whatsappUrl: "https://wa.me/917875333306",
+  facebookUrl: "https://www.facebook.com/share/19WR8nbkeX/",
 };
 
 const img = (id: string, w = 1000) =>

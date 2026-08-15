@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { WhatsApp } from "./icons";
+import { WhatsApp, Facebook } from "./icons";
 import { site, asset } from "@/lib/data";
 
 const columns = [
@@ -88,12 +88,23 @@ export default function Footer() {
               </p>
             </div>
 
-            <a
-              href={site.whatsappUrl}
-              className="mt-5 inline-flex items-center gap-2 rounded-[var(--radius-pill)] bg-[#25D366] px-4 py-2 text-sm font-medium text-white hover:bg-[#1fb457]"
-            >
-              <WhatsApp size={16} /> {site.whatsappDisplay}
-            </a>
+            <div className="mt-5 flex flex-wrap items-center gap-3">
+              <a
+                href={site.whatsappUrl}
+                className="inline-flex items-center gap-2 rounded-[var(--radius-pill)] bg-[#25D366] px-4 py-2 text-sm font-medium text-white hover:bg-[#1fb457]"
+              >
+                <WhatsApp size={16} /> {site.whatsappDisplay}
+              </a>
+              <a
+                href={site.facebookUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow Holiday In Goa on Facebook"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#1877F2] text-white hover:bg-[#0f66d0]"
+              >
+                <Facebook size={18} />
+              </a>
+            </div>
           </div>
 
           {columns.map((col) => (
