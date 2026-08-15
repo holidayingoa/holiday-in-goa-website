@@ -88,23 +88,12 @@ export default function Footer() {
               </p>
             </div>
 
-            <div className="mt-5 flex flex-wrap items-center gap-3">
-              <a
-                href={site.whatsappUrl}
-                className="inline-flex items-center gap-2 rounded-[var(--radius-pill)] bg-[#25D366] px-4 py-2 text-sm font-medium text-white hover:bg-[#1fb457]"
-              >
-                <WhatsApp size={16} /> {site.whatsappDisplay}
-              </a>
-              <a
-                href={site.facebookUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Follow Holiday In Goa on Facebook"
-                className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#1877F2] text-white hover:bg-[#0f66d0]"
-              >
-                <Facebook size={18} />
-              </a>
-            </div>
+            <a
+              href={site.whatsappUrl}
+              className="mt-5 inline-flex items-center gap-2 rounded-[var(--radius-pill)] bg-[#25D366] px-4 py-2 text-sm font-medium text-white hover:bg-[#1fb457]"
+            >
+              <WhatsApp size={16} /> {site.whatsappDisplay}
+            </a>
           </div>
 
           {columns.map((col) => (
@@ -132,14 +121,25 @@ export default function Footer() {
           <p className="text-xs text-white/50">
             © 2026 {site.name}. All rights reserved.
           </p>
-          <div className="flex items-center gap-3 text-xs text-white/50">
-            <span>Secure payments</span>
-            <span className="rounded bg-white/10 px-2 py-1 font-semibold text-white/80">
-              UPI
-            </span>
-            <span className="rounded bg-white/10 px-2 py-1 font-semibold text-white/80">
-              VISA
-            </span>
+          <div className="flex items-center gap-4 text-xs text-white/50">
+            <a
+              href={site.facebookUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Follow Holiday In Goa on Facebook"
+              className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#1877F2] text-white hover:bg-[#0f66d0]"
+            >
+              <Facebook size={18} />
+            </a>
+            <div className="flex items-center gap-3">
+              <span>Secure payments</span>
+              <span className="rounded bg-white/10 px-2 py-1 font-semibold text-white/80">
+                UPI
+              </span>
+              <span className="rounded bg-white/10 px-2 py-1 font-semibold text-white/80">
+                VISA
+              </span>
+            </div>
           </div>
         </div>
       </div>
