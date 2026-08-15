@@ -812,6 +812,11 @@ export const tours: Tour[] = [
     price: 2000,
     strikePrice: 2500,
     image: img("photo-1560275619-4662e36fa65c"),
+    gallery: [
+      asset("/ws-jet-ski.jpg"),
+      asset("/ws-parasailing.jpg"),
+      asset("/ws-banana-boat.jpg"),
+    ],
     badge: "Bestseller",
     description:
       "A full-day Grand Island adventure combining PADI-guided scuba diving with a bundle of water sports. Cruise 35 km by boat with dolphin sightseeing, scenic points, Bollywood music and entertainment, an unlimited buffet lunch and a guided underwater dive with photos and videos. Sharing mini-bus transfer with hotel pickup & drop.",
@@ -847,6 +852,7 @@ export const tours: Tour[] = [
     price: 3000,
     strikePrice: 5000,
     image: img("photo-1682687982501-1e58ab814714"),
+    gallery: [asset("/ws-bumper-ride.jpg"), asset("/ws-banana-boat-2.jpg")],
     description:
       "A full-day scuba and water sports combo at Malvan in a comfortable AC mini-bus. Enjoy clear-water diving with a PADI guide, dolphin sightseeing, sightseeing of famous attractions, an unlimited buffet lunch and a bundle of water sports. Hotel pickup & drop included.",
     highlights: [
@@ -880,6 +886,11 @@ export const tours: Tour[] = [
     price: 1800,
     strikePrice: 2500,
     image: img("photo-1583212292454-1fe6229603b7"),
+    gallery: [
+      asset("/ws-speed-boat.jpg"),
+      asset("/ws-bumper-ride.jpg"),
+      asset("/ws-parasailing.jpg"),
+    ],
     badge: "Value",
     description:
       "A half-day scuba and water sports combo at Paradise Island, roughly a 40-minute boat journey from Calangute Beach. Includes a PADI-guided dive with training, dolphin sightseeing, sightseeing of famous attractions, an unlimited buffet lunch and water sports. Sharing mini-bus transfer with hotel pickup & drop.",
@@ -915,7 +926,14 @@ export const tours: Tour[] = [
     reviews: 278,
     price: 1800,
     strikePrice: 2500,
-    image: img("photo-1530870110042-98b2cb110834"),
+    image: asset("/ws-banana-boat.jpg"),
+    gallery: [
+      asset("/ws-jet-ski.jpg"),
+      asset("/ws-parasailing.jpg"),
+      asset("/ws-bumper-ride.jpg"),
+      asset("/ws-speed-boat.jpg"),
+      asset("/ws-banana-boat-2.jpg"),
+    ],
     badge: "5 Rides",
     description:
       "Five back-to-back water sports rides at Calangute–Baga Beach — jet ski, banana, bumper, speed boat and parasailing. Each activity is provided once per person and every ride runs for the maximum permitted duration. Please note: pickup & drop and food are not included — guests report directly at the activity location. Advance payment is required to confirm the booking.",
@@ -1135,6 +1153,11 @@ export const tours: Tour[] = [
     price: 1499,
     strikePrice: 2500,
     image: asset("/adv-boat-tour.jpg"),
+    gallery: [
+      asset("/ws-banana-boat.jpg"),
+      asset("/ws-jet-ski.jpg"),
+      asset("/ws-speed-boat.jpg"),
+    ],
     badge: "All-Inclusive",
     specs: [
       { label: "Boat", value: "Catamaran double-decker AC boat" },
@@ -1175,7 +1198,7 @@ export const tours: Tour[] = [
     reviews: 156,
     price: 500,
     strikePrice: 999,
-    image: asset("/adv-kayaking.jpg"),
+    image: asset("/kayaking-goa.jpg"),
     description:
       "Paddle through peaceful mangrove backwaters spotting birds and marine life on this calm, beginner-friendly kayaking experience.",
     highlights: [
@@ -1358,6 +1381,7 @@ export const tours: Tour[] = [
     reviews: 96,
     price: 2999,
     image: asset("/grand-island.jpg"),
+    gallery: [asset("/snorkeling-turtle.jpg")],
     badge: "Full Day",
     description:
       "A full-day boat adventure to Grand Island. Cruise past Fort Aguada, the Portuguese Jail and Jimmy's iconic villa with dolphin sighting along the way, then snorkel and swim in the Arabian Sea with a professional trainer. Enjoy a fishing experience, marine-life exploration and a hearty onboard lunch with unlimited beer. Pickup 08:00–08:30 AM from Calangute, Baga, Candolim, Arpora & nearby areas.",
