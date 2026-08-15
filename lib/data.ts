@@ -106,7 +106,7 @@ export const categories: Category[] = [
     slug: "cruises",
     name: "Cruises",
     tagline: "Sunset & dinner cruises",
-    image: img("photo-1544551763-46a013bb70d5"),
+    image: asset("/nirvana-bridge-night.jpg"),
   },
   {
     slug: "scuba-diving",
@@ -821,7 +821,7 @@ export const tours: Tour[] = [
     reviews: 210,
     price: 1999,
     strikePrice: 2500,
-    image: img("photo-1560275619-4662e36fa65c"),
+    image: img("photo-1544551763-46a013bb70d5"),
     gallery: [
       asset("/snorkeling-turtle.jpg"),
       asset("/ws-jet-ski.jpg"),
