@@ -30,7 +30,11 @@ export default function TourCard({
           className="object-cover"
         />
         {tour.badge && (
-          <span className="absolute left-3 top-3 rounded-[var(--radius-pill)] brand-gradient px-3 py-1 text-xs font-semibold text-white">
+          <span
+            className={`absolute left-3 top-3 rounded-[var(--radius-pill)] px-3 py-1 text-xs font-semibold text-white ${
+              tour.closed ? "bg-alert" : "brand-gradient"
+            }`}
+          >
             {tour.badge}
           </span>
         )}

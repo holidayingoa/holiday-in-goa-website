@@ -15,6 +15,7 @@ import {
 import { Section, Button, Stars } from "@/components/ui";
 import PageHero from "@/components/PageHero";
 import TourCard from "@/components/TourCard";
+import Gallery from "@/components/Gallery";
 import JsonLd from "@/components/JsonLd";
 import { WhatsApp, Clock, Pin, Shield, Bolt } from "@/components/icons";
 
@@ -89,11 +90,13 @@ export default async function TourPage({
     .slice(0, 3);
 
   const priceUnit = tour.priceUnit ?? "person";
-  const bookMsg = tour.priceOnRequest
-    ? `Hi Holiday In Goa, I'd like to know the price and availability for "${tour.title}". Please share details.`
-    : `Hi Holiday In Goa, I'd like to book "${tour.title}" (${inr(
-        tour.price,
-      )} / ${priceUnit}). Please share availability.`;
+  const bookMsg = tour.closed
+    ? `Hi Holiday In Goa, I see "${tour.title}" is temporarily closed. Could you suggest a similar option for my dates?`
+    : tour.priceOnRequest
+      ? `Hi Holiday In Goa, I'd like to know the price and availability for "${tour.title}". Please share details.`
+      : `Hi Holiday In Goa, I'd like to book "${tour.title}" (${inr(
+          tour.price,
+        )} / ${priceUnit}). Please share availability.`;
 
   const productLd = {
     "@context": "https://schema.org",
@@ -161,6 +164,10 @@ export default async function TourPage({
                 <Clock size={15} /> {tour.duration}
               </span>
             </div>
+
+            {tour.gallery && tour.gallery.length > 0 && (
+              <Gallery images={tour.gallery} title={tour.title} />
+            )}
 
             {tour.specs && tour.specs.length > 0 && (
               <div className="mt-5 grid gap-3 sm:grid-cols-2">
@@ -294,20 +301,28 @@ export default async function TourPage({
 
               <div className="my-5 h-px bg-sea-glass" />
 
-              <div className="space-y-2 text-sm text-ink/90">
-                <p className="flex items-center gap-2">
-                  <Bolt size={16} className="text-emerald" /> Instant WhatsApp
-                  confirmation
+              {tour.closed ? (
+                <p className="rounded-[var(--radius-md)] bg-alert/10 px-4 py-3 text-sm font-medium text-alert">
+                  This experience is temporarily closed and cannot be booked
+                  right now.
                 </p>
-                <p className="flex items-center gap-2">
-                  <Shield size={16} className="text-emerald" /> Free cancellation
-                  (24h)
-                </p>
-              </div>
+              ) : (
+                <div className="space-y-2 text-sm text-ink/90">
+                  <p className="flex items-center gap-2">
+                    <Bolt size={16} className="text-emerald" /> Instant WhatsApp
+                    confirmation
+                  </p>
+                  <p className="flex items-center gap-2">
+                    <Shield size={16} className="text-emerald" /> Free
+                    cancellation (24h)
+                  </p>
+                </div>
+              )}
 
               <div className="mt-6 flex flex-col gap-3">
                 <Button href={whatsapp(bookMsg)} variant="whatsapp" size="lg">
-                  <WhatsApp /> Book on WhatsApp
+                  <WhatsApp />{" "}
+                  {tour.closed ? "Ask about alternatives" : "Book on WhatsApp"}
                 </Button>
                 <Button href={`tel:${site.phoneRaw}`} variant="ghost" size="lg">
                   Call {site.phone}
@@ -315,7 +330,9 @@ export default async function TourPage({
               </div>
 
               <p className="mt-4 text-center text-xs text-muted">
-                No payment now — confirm details with our team first.
+                {tour.closed
+                  ? "We'll suggest a similar club for your dates."
+                  : "No payment now — confirm details with our team first."}
               </p>
             </div>
           </aside>
