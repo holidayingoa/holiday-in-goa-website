@@ -1361,10 +1361,15 @@ export const tours: Tour[] = [
     strikePrice: 4000,
     image: asset("/fishing-catch-group.jpg"),
     gallery: [
+      asset("/fishing-kingfish-crew.jpg"),
       asset("/fishing-catch-four.jpg"),
+      asset("/fishing-sunset-rods.jpg"),
+      asset("/fishing-rod-bent-catch.jpg"),
       asset("/fishing-grouper-pair.jpg"),
       asset("/fishing-rod-catch.jpg"),
+      asset("/fishing-reel-closeup.jpg"),
       asset("/fishing-onboard.jpg"),
+      asset("/fishing-rod-in-hand.jpg"),
       asset("/fishing-inspect-catch.jpg"),
     ],
     specs: [
