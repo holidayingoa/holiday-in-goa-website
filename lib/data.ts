@@ -1289,6 +1289,17 @@ export const tours: Tour[] = [
     price: 0,
     priceOnRequest: true,
     image: asset("/adv-crocodile.jpg"),
+    gallery: [
+      asset("/croc-safari-boat.jpg"),
+      asset("/croc-mangrove-bank.jpg"),
+      asset("/croc-basking.jpg"),
+      asset("/croc-jaws.jpg"),
+      asset("/croc-closeup.jpg"),
+      asset("/croc-in-mangroves.jpg"),
+      asset("/croc-safari-boat-2.jpg"),
+      asset("/croc-bird-barbet.jpg"),
+      asset("/croc-bird-prinia.jpg"),
+    ],
     description:
       "A guided boat safari through the Cumbarjua mangroves to spot wild crocodiles basking on the banks, along with kingfishers and other backwater wildlife.",
     highlights: [
