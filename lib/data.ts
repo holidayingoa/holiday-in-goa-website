@@ -1141,6 +1141,10 @@ export const tours: Tour[] = [
     image: asset("/sightseeing-dolphin-ride.jpg"),
     gallery: [
       asset("/dolphin-leaping-pair.jpg"),
+      asset("/dolphin-goa-boats.jpg"),
+      asset("/dolphin-headland.jpg"),
+      asset("/dolphin-pod-leaping.jpg"),
+      asset("/dolphin-common-closeup.jpg"),
       asset("/dolphin-leap-boats.jpg"),
       asset("/dolphin-jetty-beach.jpg"),
     ],
@@ -1283,6 +1287,10 @@ export const tours: Tour[] = [
     price: 1599,
     image: asset("/dolphin-leaping-pair.jpg"),
     gallery: [
+      asset("/dolphin-goa-boats.jpg"),
+      asset("/dolphin-headland.jpg"),
+      asset("/dolphin-pod-leaping.jpg"),
+      asset("/dolphin-common-closeup.jpg"),
       asset("/dolphin-leap-boats.jpg"),
       asset("/dolphin-jetty-beach.jpg"),
     ],
