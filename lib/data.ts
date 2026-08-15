@@ -1328,7 +1328,14 @@ export const tours: Tour[] = [
     reviews: 72,
     price: 2999,
     strikePrice: 4000,
-    image: asset("/adv-fishing.jpg"),
+    image: asset("/fishing-catch-group.jpg"),
+    gallery: [
+      asset("/fishing-catch-four.jpg"),
+      asset("/fishing-grouper-pair.jpg"),
+      asset("/fishing-rod-catch.jpg"),
+      asset("/fishing-onboard.jpg"),
+      asset("/fishing-inspect-catch.jpg"),
+    ],
     specs: [
       { label: "Morning trip", value: "05:00 AM – 09:00 AM" },
       { label: "Afternoon trip", value: "03:00 PM – 07:00 PM" },
