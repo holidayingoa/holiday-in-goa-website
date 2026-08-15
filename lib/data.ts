@@ -823,9 +823,14 @@ export const tours: Tour[] = [
     strikePrice: 2500,
     image: img("photo-1560275619-4662e36fa65c"),
     gallery: [
+      asset("/snorkeling-turtle.jpg"),
       asset("/ws-jet-ski.jpg"),
       asset("/ws-parasailing.jpg"),
       asset("/ws-banana-boat.jpg"),
+      asset("/ws-banana-boat-2.jpg"),
+      asset("/ws-bumper-ride.jpg"),
+      asset("/ws-speed-boat.jpg"),
+      asset("/ws-paddleboarding.jpg"),
     ],
     badge: "Bestseller",
     description:
@@ -862,7 +867,16 @@ export const tours: Tour[] = [
     price: 2999,
     strikePrice: 5000,
     image: img("photo-1682687982501-1e58ab814714"),
-    gallery: [asset("/ws-bumper-ride.jpg"), asset("/ws-banana-boat-2.jpg")],
+    gallery: [
+      asset("/snorkeling-turtle.jpg"),
+      asset("/ws-jet-ski.jpg"),
+      asset("/ws-parasailing.jpg"),
+      asset("/ws-banana-boat.jpg"),
+      asset("/ws-banana-boat-2.jpg"),
+      asset("/ws-bumper-ride.jpg"),
+      asset("/ws-speed-boat.jpg"),
+      asset("/ws-paddleboarding.jpg"),
+    ],
     description:
       "A full-day scuba and water sports combo at Malvan in a comfortable AC mini-bus. Enjoy clear-water diving with a PADI guide, dolphin sightseeing, sightseeing of famous attractions, an unlimited buffet lunch and a bundle of water sports. Hotel pickup & drop included.",
     highlights: [
@@ -897,9 +911,14 @@ export const tours: Tour[] = [
     strikePrice: 2500,
     image: img("photo-1583212292454-1fe6229603b7"),
     gallery: [
-      asset("/ws-speed-boat.jpg"),
-      asset("/ws-bumper-ride.jpg"),
+      asset("/snorkeling-turtle.jpg"),
+      asset("/ws-jet-ski.jpg"),
       asset("/ws-parasailing.jpg"),
+      asset("/ws-banana-boat.jpg"),
+      asset("/ws-banana-boat-2.jpg"),
+      asset("/ws-bumper-ride.jpg"),
+      asset("/ws-speed-boat.jpg"),
+      asset("/ws-paddleboarding.jpg"),
     ],
     badge: "Value",
     description:
