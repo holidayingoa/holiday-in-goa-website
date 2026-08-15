@@ -711,7 +711,7 @@ export const tours: Tour[] = [
     reviews: 356,
     price: 1199,
     strikePrice: 1799,
-    image: asset("/nirvana-cruise.png"),
+    image: asset("/nirvana-bridge-night.jpg"),
     badge: "Bestseller",
     description:
       "A vibrant 3-hour party dinner cruise on the River Mandovi, open to everyone: couples, families, friends, groups and solo travellers. Enjoy a welcome drink, 2 drinks, a buffet dinner and a non-stop DJ with a full dance floor. A moving cruise from Panjim to Old Goa, Miramar and back. Reporting/pickup 7:30 PM, cruise 8:30–11:30 PM. Please note: tequila shots are not available on Nirvana.",
@@ -732,6 +732,11 @@ export const tours: Tour[] = [
       "Tequila shots (not available on Nirvana)",
       "Personal expenses & tips",
       "Anything not mentioned in inclusions",
+    ],
+    gallery: [
+      asset("/nirvana-jetty-dusk.jpg"),
+      asset("/nirvana-aerial-river.jpg"),
+      asset("/nirvana-live-performance.jpg"),
     ],
   },
   {
@@ -1203,7 +1208,7 @@ export const tours: Tour[] = [
     reviews: 156,
     price: 500,
     strikePrice: 999,
-    image: asset("/kayaking-goa.jpg"),
+    image: asset("/kayak-mangrove-couple.jpg"),
     description:
       "Paddle through peaceful mangrove backwaters spotting birds and marine life on this calm, beginner-friendly kayaking experience.",
     highlights: [
@@ -1214,6 +1219,19 @@ export const tours: Tour[] = [
     ],
     inclusions: ["Kayak & paddle", "Life jacket", "Guide", ...genInclusions.slice(0, 1)],
     exclusions: genExclusions,
+    gallery: [
+      asset("/kayak-group-backwater.jpg"),
+      asset("/kayak-green-sparkle.jpg"),
+      asset("/kayak-couple-paddling.jpg"),
+      asset("/kayak-arms-open.jpg"),
+      asset("/kayak-pink-relax.jpg"),
+      asset("/kayak-palms-pink.jpg"),
+      asset("/kayak-friends-palms.jpg"),
+      asset("/kayak-family-red.jpg"),
+      asset("/kayaking-goa.jpg"),
+      asset("/kayak-launch-point.jpg"),
+      asset("/kayak-fleet-bridge.jpg"),
+    ],
   },
   {
     slug: "flyboarding-goa",
