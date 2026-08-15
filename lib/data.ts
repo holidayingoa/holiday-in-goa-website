@@ -1430,12 +1430,16 @@ export const tours: Tour[] = [
     reviews: 58,
     price: 2899,
     strikePrice: 4000,
-    image: asset("/adv-crab.jpg"),
+    image: asset("/crab-hands-catch.jpg"),
     gallery: [
       asset("/crab-net-lowering.jpg"),
       asset("/crab-bucket-catch.jpg"),
       asset("/crab-in-net.jpg"),
       asset("/crab-mangrove-canoe.jpg"),
+      asset("/crab-fishermen-sorting.jpg"),
+      asset("/crab-basket-beach.jpg"),
+      asset("/crab-hand-holding-pair.jpg"),
+      asset("/adv-crab.jpg"),
     ],
     specs: [
       { label: "Pick-up", value: "02:00 PM (selected North Goa areas)" },
