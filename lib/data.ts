@@ -1431,6 +1431,12 @@ export const tours: Tour[] = [
     price: 2899,
     strikePrice: 4000,
     image: asset("/adv-crab.jpg"),
+    gallery: [
+      asset("/crab-net-lowering.jpg"),
+      asset("/crab-bucket-catch.jpg"),
+      asset("/crab-in-net.jpg"),
+      asset("/crab-mangrove-canoe.jpg"),
+    ],
     specs: [
       { label: "Pick-up", value: "02:00 PM (selected North Goa areas)" },
       { label: "Boarding", value: "03:30 PM" },
