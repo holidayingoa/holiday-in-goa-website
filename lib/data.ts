@@ -1173,7 +1173,6 @@ export const tours: Tour[] = [
     strikePrice: 2500,
     image: asset("/boat-h2o-adventure.jpg"),
     gallery: [
-      asset("/adv-boat-tour.jpg"),
       asset("/boat-kayaks-alongside.jpg"),
       asset("/paradise-cruise-river.jpg"),
       asset("/ws-speed-boat.jpg"),
