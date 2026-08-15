@@ -1129,6 +1129,11 @@ export const tours: Tour[] = [
     price: 350,
     strikePrice: 400,
     image: asset("/sightseeing-dolphin-ride.jpg"),
+    gallery: [
+      asset("/dolphin-leaping-pair.jpg"),
+      asset("/dolphin-leap-boats.jpg"),
+      asset("/dolphin-jetty-beach.jpg"),
+    ],
     description:
       "A scenic boat trip into the Arabian Sea to spot playful dolphins in the wild, passing Fort Aguada and the famous millionaire's palace.",
     highlights: [
@@ -1247,7 +1252,11 @@ export const tours: Tour[] = [
     rating: 4.5,
     reviews: 190,
     price: 1599,
-    image: img("photo-1607153333879-c174d265f1d2"),
+    image: asset("/dolphin-leaping-pair.jpg"),
+    gallery: [
+      asset("/dolphin-leap-boats.jpg"),
+      asset("/dolphin-jetty-beach.jpg"),
+    ],
     description:
       "A fun ocean adventure in Goa — cruise out from Coco Beach Dolphin Jetty on a 1.5-hour boat ride to spot playful dolphins in the wild. A life jacket and a drinking water bottle are included. Pick-up & drop is not included. Operating 09:00 AM – 06:00 PM.",
     highlights: [
