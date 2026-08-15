@@ -756,6 +756,11 @@ export const tours: Tour[] = [
     price: 9999,
     priceUnit: "hour",
     image: asset("/private-yacht.jpg"),
+    gallery: [
+      asset("/yacht-sunset-couple.jpg"),
+      asset("/yacht-aerial-cruising.jpg"),
+      asset("/yacht-aerial-wake.jpg"),
+    ],
     badge: "Luxury",
     description:
       "Charter a private luxury yacht on the River Mandovi in Panjim — perfect for couple celebrations, proposals, family gatherings and photoshoots. Glide past the Panjim bridge, mangroves and old white churches on a spacious open deck with music and refreshments. Starting at ₹9,999 per hour, minimum 2 hours.",
