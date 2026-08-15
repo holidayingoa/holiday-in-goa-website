@@ -1225,8 +1225,14 @@ export const tours: Tour[] = [
     rating: 4.7,
     reviews: 88,
     price: 2500,
-    image: asset("/flyboarding.jpg"),
-    gallery: [asset("/flyboarding.png")],
+    image: asset("/flyboard-chapora.jpg"),
+    gallery: [
+      asset("/flyboard-goa-coast.jpg"),
+      asset("/flyboard-dive-trick.jpg"),
+      asset("/flyboard-open-sea.jpg"),
+      asset("/flyboarding.jpg"),
+      asset("/flyboarding.png"),
+    ],
     badge: "Adrenaline",
     description:
       "The most adventurous water sport in Goa — strap into a water-jet powered flyboard and rise above the Chapora River like a superhero, guided by a certified instructor. Choose a single or tandem slot. Single: 15 min ₹3,600 / 10 min ₹2,500. Tandem/Double (weight below 50 kg): 10 min ₹5,000 / 5 min ₹3,000.",
