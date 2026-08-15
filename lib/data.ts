@@ -1570,7 +1570,17 @@ export const tours: Tour[] = [
     reviews: 142,
     price: 3299,
     strikePrice: 4999,
-    image: asset("/adv-bungy.jpg"),
+    image: asset("/bungy-forest-jump.jpg"),
+    gallery: [
+      asset("/bungy-crane-lowangle.jpg"),
+      asset("/bungy-crane-platform.jpg"),
+      asset("/bungy-armswide-leap.jpg"),
+      asset("/bungy-tower-crane.jpg"),
+      asset("/bungy-forest-fall.jpg"),
+      asset("/bungy-canyon-river.jpg"),
+      asset("/bungy-sunset-silhouette.jpg"),
+      asset("/adv-bungy.jpg"),
+    ],
     badge: "India's Highest",
     description:
       "Take the leap at India's highest bungy jump — a heart-pounding 61-metre plunge in North Goa. Built to safety standards inspired by Australia and New Zealand, every jump comes with free photos and videos. Feel the height, conquer the fear, live the adventure. Price is all-inclusive of GST. Participation is subject to the operator's age, weight, health and safety requirements.",
