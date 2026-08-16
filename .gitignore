@@ -7,6 +7,9 @@
 /.next/
 /out/
 
+# generated responsive image variants (rebuilt via prebuild)
+/public/_img/
+
 # production
 /build
 

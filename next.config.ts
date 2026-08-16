@@ -12,7 +12,13 @@ const nextConfig: NextConfig = {
   basePath: basePath || undefined,
   assetPrefix: basePath ? `${basePath}/` : undefined,
   images: {
-    unoptimized: true,
+    // Static export disables the built-in optimizer, so we use a custom loader
+    // that points at pre-generated WebP variants (scripts/optimize-images.mjs).
+    // Widths below must match WIDTHS in that script and image-loader.js.
+    loader: "custom",
+    loaderFile: "./image-loader.js",
+    deviceSizes: [640, 960, 1440, 1920],
+    imageSizes: [128, 384],
     remotePatterns: [
       {
         protocol: "https",
