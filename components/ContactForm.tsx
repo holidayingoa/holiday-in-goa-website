@@ -28,7 +28,7 @@ export default function ContactForm() {
       className="glass rounded-[var(--radius-lg)] p-6"
       onSubmit={(e) => {
         e.preventDefault();
-        window.open(whatsapp(composed), "_blank");
+        window.open(whatsapp(composed), "_blank", "noopener,noreferrer");
       }}
     >
       <div className="grid gap-4 sm:grid-cols-2">

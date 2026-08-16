@@ -114,14 +114,15 @@ export default function Header() {
   const solid = scrolled || pathname !== "/";
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        solid
-          ? "bg-foam/90 backdrop-blur-md shadow-[0_4px_20px_rgba(11,94,90,0.06)]"
-          : "bg-transparent"
-      }`}
-    >
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-5">
+    <>
+      <header
+        className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
+          solid
+            ? "bg-foam/90 backdrop-blur-md shadow-[0_4px_20px_rgba(11,94,90,0.06)]"
+            : "bg-transparent"
+        }`}
+      >
+        <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-5">
         <Logo />
 
         {/* Desktop nav with dropdowns — flex-1 + min-w-0 lets it shrink so long
@@ -254,9 +255,12 @@ export default function Header() {
             <Menu />
           </button>
         </div>
-      </div>
+        </div>
+      </header>
 
-      {/* Mobile / collapsed menu */}
+      {/* Mobile / collapsed menu — rendered as a sibling of <header> (not a
+          child) so the header's backdrop-filter can't become the containing
+          block for this fixed overlay and collapse it to the header's height. */}
       {open && (
         <div
           className={`fixed inset-0 z-50 overflow-y-auto bg-foam/97 backdrop-blur-xl ${
@@ -337,6 +341,6 @@ export default function Header() {
           </div>
         </div>
       )}
-    </header>
+    </>
   );
 }
