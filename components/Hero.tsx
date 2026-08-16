@@ -13,7 +13,7 @@ export default function Hero() {
   return (
     <section id="top" className="relative min-h-[94vh] w-full overflow-hidden">
       <Image
-        src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2100&q=85"
+        src={asset("/goa-coastline-hero.jpg")}
         alt="Pristine turquoise Goa coastline"
         fill
         priority
@@ -43,7 +43,7 @@ export default function Hero() {
           </div>
           <div className="absolute bottom-0 left-0 h-52 w-44 -rotate-6 overflow-hidden rounded-[var(--radius-lg)] border-4 border-white shadow-[0_20px_50px_rgba(11,94,90,0.22)]">
             <Image
-              src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=500&q=85"
+              src={asset("/goa-palm-cove.jpg")}
               alt="Palm-lined Goa cove"
               fill
               sizes="176px"

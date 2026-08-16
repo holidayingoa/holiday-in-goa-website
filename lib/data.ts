@@ -76,9 +76,6 @@ export const site = {
   facebookUrl: "https://www.facebook.com/share/19WR8nbkeX/",
 };
 
-const img = (id: string, w = 1000) =>
-  `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=80`;
-
 // Prefixes local (public/) asset paths with the deploy basePath so they
 // resolve correctly on GitHub Pages project URLs. No-op locally.
 export const asset = (path: string) =>
@@ -100,7 +97,7 @@ export const categories: Category[] = [
     slug: "packages",
     name: "Tour Packages",
     tagline: "3N–6N Goa holidays",
-    image: img("photo-1520454974749-611b7248ffdb"),
+    image: asset("/cat-packages.jpg"),
   },
   {
     slug: "cruises",
@@ -112,19 +109,19 @@ export const categories: Category[] = [
     slug: "scuba-diving",
     name: "Scuba Diving",
     tagline: "Grand Island reefs",
-    image: img("photo-1530053969600-caed2596d242"),
+    image: asset("/cat-scuba-diving.jpg"),
   },
   {
     slug: "water-sports",
     name: "Water Sports",
     tagline: "Jet ski & parasailing",
-    image: img("photo-1530870110042-98b2cb110834"),
+    image: asset("/cat-water-sports.jpg"),
   },
   {
     slug: "sightseeing",
     name: "Sightseeing",
     tagline: "North & South Goa",
-    image: img("photo-1471922694854-ff1b63b20054"),
+    image: asset("/cat-sightseeing.jpg"),
   },
   {
     slug: "dudhsagar",
@@ -136,19 +133,19 @@ export const categories: Category[] = [
     slug: "adventure",
     name: "Adventure",
     tagline: "Kayaking & flyboarding",
-    image: img("photo-1502680390469-be75c86b636f"),
+    image: asset("/cat-adventure.jpg"),
   },
   {
     slug: "casino",
     name: "Casino",
     tagline: "Big Daddy & Deltin nights",
-    image: img("photo-1596838132731-3301c3fd4317"),
+    image: asset("/cat-casino.jpg"),
   },
   {
     slug: "nightlife",
     name: "Nightlife & Parties",
     tagline: "Clubs, pubs & beach parties",
-    image: img("photo-1470229722913-7c0e2dbbafd3"),
+    image: asset("/cat-nightlife.jpg"),
   },
 ];
 
@@ -177,7 +174,7 @@ export const tours: Tour[] = [
     reviews: 96,
     price: 56999,
     priceUnit: "couple",
-    image: img("photo-1582719478250-c89cae4dc85b"),
+    image: asset("/pkg-luxury-escape.jpg"),
     badge: "5-Star",
     specs: [
       { label: "Stay", value: "5-Star Hotel · 01 Premium Room · 4 Nights" },
@@ -267,7 +264,7 @@ export const tours: Tour[] = [
     reviews: 142,
     price: 35999,
     priceUnit: "couple",
-    image: img("photo-1566073771259-6a8506099945"),
+    image: asset("/pkg-luxury-holiday.jpg"),
     badge: "Luxury",
     specs: [
       { label: "Stay", value: "4-Star Premium Hotel · 4 Nights" },
@@ -357,7 +354,7 @@ export const tours: Tour[] = [
     reviews: 187,
     price: 20999,
     priceUnit: "couple",
-    image: img("photo-1507525428034-b723cf961d3e"),
+    image: asset("/goa-coastline-hero.jpg"),
     badge: "Premium",
     specs: [
       { label: "Stay", value: "3-Star Premium Hotel · 4 Nights" },
@@ -501,7 +498,7 @@ export const tours: Tour[] = [
     reviews: 214,
     price: 13900,
     strikePrice: 18999,
-    image: img("photo-1519046904884-53103b34b206"),
+    image: asset("/goa-palm-cove.jpg"),
     badge: "Romantic",
     description:
       "A curated 4-day romantic escape covering North and South Goa with a handpicked stay, sightseeing, a sunset dinner cruise and airport transfers — perfect for couples and honeymooners.",
@@ -530,7 +527,7 @@ export const tours: Tour[] = [
     reviews: 231,
     price: 12999,
     priceUnit: "couple",
-    image: img("photo-1512343879784-a960bf40e7f2"),
+    image: asset("/pkg-essential-escape.jpg"),
     badge: "Value",
     specs: [
       { label: "Stay", value: "2-Star Hotel · 3 Nights" },
@@ -612,7 +609,7 @@ export const tours: Tour[] = [
     reviews: 168,
     price: 11800,
     strikePrice: 15999,
-    image: img("photo-1476041800959-2f6bb412c8ce"),
+    image: asset("/goa-family-beach.jpg"),
     badge: "Family",
     description:
       "A relaxed 5-day family holiday with comfortable stays, easy sightseeing, a dolphin boat ride and a Dudhsagar waterfall trip — designed to be fun for all ages.",
@@ -826,7 +823,7 @@ export const tours: Tour[] = [
     reviews: 210,
     price: 1999,
     strikePrice: 2500,
-    image: img("photo-1544551763-46a013bb70d5"),
+    image: asset("/goa-sunset-cruise.jpg"),
     gallery: [
       asset("/snorkeling-turtle.jpg"),
       asset("/ws-jet-ski.jpg"),
@@ -871,7 +868,7 @@ export const tours: Tour[] = [
     reviews: 142,
     price: 2999,
     strikePrice: 5000,
-    image: img("photo-1682687982501-1e58ab814714"),
+    image: asset("/scuba-malvan.jpg"),
     gallery: [
       asset("/snorkeling-turtle.jpg"),
       asset("/ws-jet-ski.jpg"),
@@ -914,7 +911,7 @@ export const tours: Tour[] = [
     reviews: 118,
     price: 1799,
     strikePrice: 2500,
-    image: img("photo-1583212292454-1fe6229603b7"),
+    image: asset("/scuba-paradise-island.jpg"),
     gallery: [
       asset("/snorkeling-turtle.jpg"),
       asset("/ws-jet-ski.jpg"),
@@ -1775,7 +1772,7 @@ export const tours: Tour[] = [
     reviews: 231,
     price: 1499,
     strikePrice: 2200,
-    image: img("photo-1516450360452-9312f5e86fc7"),
+    image: asset("/nightlife-pub-crawl.jpg"),
     badge: "Bestseller",
     description:
       "Hop across the best clubs and bars on Goa's most famous party street with a group host, skip-the-line entries, welcome shots and a high-energy Bollywood-meets-EDM night out.",
@@ -1808,7 +1805,7 @@ export const tours: Tour[] = [
     reviews: 187,
     price: 3000,
     priceUnit: "couple",
-    image: img("photo-1545128485-c400e7702796"),
+    image: asset("/nightlife-club-cubana.jpg"),
     badge: "Temporarily Closed",
     closed: true,
     specs: [
@@ -1847,7 +1844,7 @@ export const tours: Tour[] = [
     reviews: 164,
     price: 2500,
     priceUnit: "couple",
-    image: img("photo-1533174072545-7a4b6ad7a6c3"),
+    image: asset("/nightlife-titos.jpg"),
     specs: [
       { label: "Couple entry", value: "₹2,500 (fully redeemable as cover)" },
       { label: "Stag entry", value: "₹2,500 (fully redeemable as cover)" },
@@ -1883,7 +1880,7 @@ export const tours: Tour[] = [
     reviews: 128,
     price: 1000,
     priceUnit: "couple",
-    image: img("photo-1516450360452-9312f5e86fc7"),
+    image: asset("/nightlife-pub-crawl.jpg"),
     specs: [
       { label: "Couple entry", value: "₹1,000 (food & drinks charged extra)" },
       { label: "Stag entry", value: "₹1,500 (food & drinks charged extra)" },
@@ -1918,7 +1915,7 @@ export const tours: Tour[] = [
     reviews: 142,
     price: 1000,
     strikePrice: 1600,
-    image: img("photo-1493225457124-a3eb161ffa5f"),
+    image: asset("/nightlife-psytrance.jpg"),
     badge: "Trending",
     description:
       "Dive into Goa's legendary open-air electronic scene with entry to a Hilltop/Vagator psytrance night — multiple stages, big-name DJs and a bohemian international crowd under the stars.",
@@ -1949,7 +1946,7 @@ export const tours: Tour[] = [
     reviews: 209,
     price: 900,
     strikePrice: 1400,
-    image: img("photo-1508997449629-303059a039c0"),
+    image: asset("/nightlife-silent-noise.jpg"),
     badge: "Unique",
     description:
       "Goa's most unique night out — dance on Palolem beach to three live DJs streamed through glowing wireless headphones. Flip channels, pull off the headset and watch a crowd dancing in silence.",
@@ -1981,7 +1978,7 @@ export const tours: Tour[] = [
     reviews: 176,
     price: 5000,
     priceUnit: "couple",
-    image: img("photo-1574391884720-bbc3740c59d1"),
+    image: asset("/nightlife-hammerzz.jpg"),
     badge: "Luxury",
     specs: [
       { label: "Couple entry", value: "₹5,000 (fully redeemable as cover)" },
@@ -2063,7 +2060,7 @@ export const tours: Tour[] = [
     reviews: 149,
     price: 3000,
     priceUnit: "couple",
-    image: img("photo-1566737236500-c8ac43014a67"),
+    image: asset("/nightlife-sinq.jpg"),
     badge: "Popular",
     specs: [
       { label: "Couple entry", value: "₹3,000 (fully redeemable as cover)" },
@@ -2095,25 +2092,25 @@ export const moods: Mood[] = [
   {
     name: "For Couples",
     blurb: "Sunset cruises & romantic escapes",
-    image: img("photo-1519046904884-53103b34b206"),
+    image: asset("/goa-palm-cove.jpg"),
     categorySlug: "packages",
   },
   {
     name: "For Families",
     blurb: "Easy sightseeing & dolphin rides",
-    image: img("photo-1476041800959-2f6bb412c8ce"),
+    image: asset("/goa-family-beach.jpg"),
     categorySlug: "sightseeing",
   },
   {
     name: "For Groups",
     blurb: "Party boats & beach hopping",
-    image: img("photo-1533105079780-92b9be482077"),
+    image: asset("/mood-groups-party-boat.jpg"),
     categorySlug: "adventure",
   },
   {
     name: "Adventure Seekers",
     blurb: "Scuba, flyboard & waterfalls",
-    image: img("photo-1502933691298-84fc14542831"),
+    image: asset("/mood-adventure.jpg"),
     categorySlug: "scuba-diving",
   },
 ];
@@ -2157,7 +2154,7 @@ export const posts: Post[] = [
       "Peaceful shores, secret coves and the best times to visit away from the crowds.",
     tag: "Travel Guide",
     date: "Aug 1, 2026",
-    image: img("photo-1473116763249-2faaef81ccda"),
+    image: asset("/blog-hidden-beaches.jpg"),
     body: [
       "Goa's famous beaches are wonderful, but the real magic often hides just around the headland. If you want turquoise water without the crowds, these lesser-known shores are worth the extra effort.",
       "Butterfly Beach in the south is a crescent of soft sand reachable only by boat or a short forest trail — go early to spot dolphins on the way. Nearby, Cola Beach hides a freshwater lagoon right behind the sand, perfect for a quiet float.",
@@ -2172,7 +2169,7 @@ export const posts: Post[] = [
       "A complete breakdown of hotels, food, transport and activity costs for families.",
     tag: "Planning",
     date: "Aug 4, 2026",
-    image: img("photo-1476041800959-2f6bb412c8ce"),
+    image: asset("/goa-family-beach.jpg"),
     body: [
       "A family holiday in Goa can be surprisingly affordable with a little planning. Here's a realistic breakdown for a family of four across a typical 4-day trip.",
       "Stays range from comfortable 3-star hotels (₹2,500–4,000/night) to family resorts with pools (₹5,000–8,000/night). Food is a highlight and a bargain — local Goan thalis and beach shacks keep daily meals around ₹1,200–2,000 for the family.",
@@ -2187,7 +2184,7 @@ export const posts: Post[] = [
       "From monsoon magic to peak-season parties — when to go for the trip you want.",
     tag: "Guide",
     date: "Jul 28, 2026",
-    image: img("photo-1520454974749-611b7248ffdb"),
+    image: asset("/cat-packages.jpg"),
     body: [
       "The 'best' time to visit Goa depends entirely on the trip you want. Each season has its own personality.",
       "November to February is peak season: sunny days, cool evenings, buzzing beaches, cruises and the biggest events. Book early — this is when Goa is at its liveliest (and priciest).",

@@ -19,12 +19,6 @@ const nextConfig: NextConfig = {
     loaderFile: "./image-loader.js",
     deviceSizes: [640, 960, 1440, 1920],
     imageSizes: [128, 384],
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "images.unsplash.com",
-      },
-    ],
   },
 };
 

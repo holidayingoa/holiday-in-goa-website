@@ -1,14 +1,14 @@
 import Image from "next/image";
 import { Section, Button } from "./ui";
 import { WhatsApp } from "./icons";
-import { site } from "@/lib/data";
+import { site, asset } from "@/lib/data";
 
 export default function FinalCTA() {
   return (
     <Section className="py-20">
       <div className="reveal relative overflow-hidden rounded-[var(--radius-lg)] px-8 py-16 text-center sm:px-16 sm:py-24">
         <Image
-          src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1800&q=85"
+          src={asset("/goa-sunset-cruise.jpg")}
           alt="Sunset cruise on the Goa coast"
           fill
           sizes="100vw"
