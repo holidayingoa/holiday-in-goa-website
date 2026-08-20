@@ -1001,18 +1001,42 @@ export const tours: Tour[] = [
     reviews: 189,
     price: 1999,
     strikePrice: 2500,
-    image: asset("/dudhsagar-monsoon-wide.jpg"),
+    image: asset("/dudhsagar-falls-train.jpg"),
+    // Photos arranged in strict serial order for the tour narrative:
+    // 01 Waterfall, 02 Jeep Safari, 03 Spice Plantation,
+    // 04 Lunch & Spices, 05 Elephant & Wildlife, 06 Old Goa Church.
     gallery: [
-      asset("/dudhsagar-railway-bridge.jpg"),
-      asset("/dudhsagar-train-crossing.jpg"),
-      asset("/dudhsagar-full-flow.jpg"),
-      asset("/dudhsagar-base-pool.jpg"),
-      asset("/dudhsagar-blue-sky-cascade.jpg"),
-      asset("/dudhsagar-jeep-river-crossing.jpg"),
-      asset("/spice-plantation-workers.jpg"),
-      asset("/spice-cardamom-harvest.jpg"),
-      asset("/spice-peppercorns.jpg"),
-      asset("/old-goa-se-cathedral.jpg"),
+      // 01 — Dudhsagar Waterfall (hero shown above, then more falls)
+      asset("/dudhsagar-falls-aerial.jpg"),
+      asset("/dudhsagar-falls-monkey.jpg"),
+      // 02 — Jeep Safari
+      asset("/dudhsagar-jeep-safari-crossing.jpg"),
+      // 03 — Spice Plantation
+      asset("/spice-plantation-path.jpg"),
+      asset("/spice-plantation-guides.jpg"),
+      asset("/spice-plantation-tour-group.jpg"),
+      asset("/spice-plantation-trail.jpg"),
+      asset("/spice-plantation-guided-walk.jpg"),
+      asset("/spice-plantation-palm-climb.jpg"),
+      asset("/spice-plantation-banana-flower.jpg"),
+      // 04 — Spice Plantation Lunch & Spices
+      asset("/spice-plantation-buffet-lunch.jpg"),
+      asset("/spice-plantation-lunch-thali.jpg"),
+      asset("/goa-market-spices.jpg"),
+      asset("/goa-spices-assorted.jpg"),
+      asset("/goa-cashew-feni.jpg"),
+      // 05 — Elephant & Wildlife
+      asset("/wildlife-elephants.jpg"),
+      asset("/wildlife-elephant-bath.jpg"),
+      asset("/wildlife-elephant-plantation.jpg"),
+      asset("/wildlife-spotted-deer.jpg"),
+      asset("/wildlife-antelope.jpg"),
+      asset("/wildlife-langur.jpg"),
+      asset("/wildlife-macaque.jpg"),
+      // 06 — Old Goa Church
+      asset("/old-goa-basilica-bom-jesus.jpg"),
+      asset("/old-goa-basilica-st-anthony.jpg"),
+      asset("/old-goa-basilica-madonna.jpg"),
     ],
     badge: "Popular",
     specs: [
